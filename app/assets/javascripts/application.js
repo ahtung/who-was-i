@@ -17,6 +17,11 @@
 
 $(function(){
   $(document).foundation();
+	
+	$('.ancestor_link').on('click', function(e) {
+		console.log('yug');
+		e.preventDefault();
+	});
 
   $('form').submit(function() {
     $('#searching').foundation('reveal', 'open');

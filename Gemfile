@@ -43,6 +43,9 @@ gem "slim-rails"
 gem "devise"
 gem "foundation-rails"
 gem "formtastic"
+gem 'colorize'
+gem 'freebase-api'
+gem 'highline'
 group :development, :test do
   gem "rspec-rails"
   gem "faker"
