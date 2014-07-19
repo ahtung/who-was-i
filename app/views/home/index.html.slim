@@ -1,15 +1,12 @@
 .row
   .columns.small-12
     h1 Who was "I"
-    a href="#" data-reveal-id="searching" Click Me For A Modal
 
-    = form_tag ancestor_search_path, :method => 'get', remote: true do
-      p
-        = label_tag :name
-        = text_field_tag :name, params[:name]
-        = label_tag :birthday
-        = text_field_tag :birthday, params[:birthday]
-        = submit_tag "search", :name => nil
+    = semantic_form_for :ancestor, url: ancestor_search_path, :method => 'get' do |f|
+      = f.inputs do
+        = f.input :name
+        = f.input :birthday
+        = f.action :submit, label: 'search'
 
 #searching.reveal-modal data-reveal=true
   h2 searching...

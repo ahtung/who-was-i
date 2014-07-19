@@ -13,9 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
 //= require_tree .
 
 $(function(){ 
 	$(document).foundation();
+	
+	$('form').submit(function() {  
+		console.log('submt')
+	    var valuesToSubmit = $(this).serialize();
+	    $.ajax({
+	        url: $(this).attr('action'),
+	        data: valuesToSubmit,
+	        // dataType: "js"
+	    }).success(function(json){
+	        //act on result.
+					console.log('aa')
+	    }).error(function(json) {
+	    	console.log(json)
+	    });
+	    return false; // prevents normal behaviour
+	});
 });
