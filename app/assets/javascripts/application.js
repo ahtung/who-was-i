@@ -19,18 +19,13 @@ $(function(){
 	$(document).foundation();
 	
 	$('form').submit(function() {  
-		console.log('submt')
-	    var valuesToSubmit = $(this).serialize();
-	    $.ajax({
-	        url: $(this).attr('action'),
-	        data: valuesToSubmit,
-	        // dataType: "js"
-	    }).success(function(json){
-	        //act on result.
-					console.log('aa')
-	    }).error(function(json) {
-	    	console.log(json)
-	    });
-	    return false; // prevents normal behaviour
+		$('#searching').foundation('reveal', 'open');
+    $.ajax({
+        url: $(this).attr('action'),
+        data: $(this).serialize()
+    }).error(function(json) {
+    	alert(json)
+    });
+    return false;
 	});
 });
