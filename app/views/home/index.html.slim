@@ -1,2 +1,7 @@
 h1 Home#index
 p Find me in app/views/home/index.html.slim
+
+= form_tag ancestor_search_path, :method => 'get' do
+  p
+    = text_field_tag :name, params[:name]
+    = submit_tag "Search", :name => nil
