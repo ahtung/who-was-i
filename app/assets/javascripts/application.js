@@ -33,6 +33,7 @@ $(function(){
 	});
 
   $('form').submit(function() {
+		$("#selfies").empty();
 		$("#selfies").append('<li>' + $("#ancestor_name").val() +'</li>');
 		
     $('#searching').foundation('reveal', 'open');
