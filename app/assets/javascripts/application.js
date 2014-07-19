@@ -13,15 +13,29 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//=require timelineJS/embed
 //= require_tree .
 
 $(function(){
   $(document).foundation();
-
 	
 	$("#ancestors" ).on( "click", '.ancestor_link', function(e) {
 		
 		$("#selfies").append('<li>' + $(this).text() +'</li>');
+		
+		// var timeline = {'timeline':{
+		// 	'headline': $(this).data('name'),
+		//   'type':"default",
+		// 	'txt': $(this).text(),
+		//   'date': $(this).data('born-on')
+		// }};
+		// createStoryJS({
+		//   type: 'timeline',
+		//   width: '100%',
+		//   height: '500',
+		// 	source: timeline,
+		//       embed_id: 'time_line'
+		//     });
 		
 		$('#searching').foundation('reveal', 'open');
     $.ajax({
@@ -33,6 +47,7 @@ $(function(){
 	});
 
   $('form').submit(function() {
+		$('#form_row').hide()
 		$("#selfies").empty();
 		$("#selfies").append('<li>' + $("#ancestor_name").val() +'</li>');
 		

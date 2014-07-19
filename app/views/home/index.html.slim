@@ -1,13 +1,20 @@
-.row
+h1 Who was "I"
+.row#form_row
   .columns.small-12
-    h1 Who was "I"
-
     = semantic_form_for :ancestor, url: ancestors_search_path, :method => 'get' do |f|
       = f.inputs do
         = f.input :name
         = f.input :birthday
         = f.action :submit, label: 'search'
 
+.row
+  .columns.small-12
+    #map
+		
+.row
+  .columns.small-12
+	  #time_line
+		
 .row
   .columns.small-12
     ul#selfies

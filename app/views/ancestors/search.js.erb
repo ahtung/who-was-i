@@ -1,5 +1,10 @@
 setTimeout(function() {
-	$('#found').foundation('reveal', 'open')
-	$('#ancestors').empty()
-	$('#ancestors').append("<%= j render :partial => 'ancestor', :collection => @ancestors, :as => :ancestor %>");
+	
+	<% if @ancestors.empty? %>
+		$('#done').foundation('reveal', 'open')
+	<% else %>
+		$('#found').foundation('reveal', 'open')
+		$('#ancestors').empty()
+		$('#ancestors').append("<%= j render :partial => 'ancestor', :collection => @ancestors, :as => :ancestor %>");
+	<% end %>
 }, 500);

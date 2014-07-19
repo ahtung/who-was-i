@@ -46,6 +46,7 @@ gem "formtastic"
 gem 'colorize'
 gem 'freebase-api'
 gem 'highline'
+gem 'timelineJS-rails', '~> 1.1.5'
 group :development, :test do
   gem "rspec-rails"
   gem "faker"
