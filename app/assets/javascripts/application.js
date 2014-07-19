@@ -20,6 +20,9 @@ $(function(){
 
 	
 	$("#ancestors" ).on( "click", '.ancestor_link', function(e) {
+		
+		$("#selfies").append('<li>' + $(this).text() +'</li>');
+		
 		$('#searching').foundation('reveal', 'open');
     $.ajax({
       url: $(this).attr('href')
@@ -30,6 +33,8 @@ $(function(){
 	});
 
   $('form').submit(function() {
+		$("#selfies").append('<li>' + $("#ancestor_name").val() +'</li>');
+		
     $('#searching').foundation('reveal', 'open');
     $.ajax({
       url: $(this).attr('action'),

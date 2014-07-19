@@ -8,6 +8,10 @@
         = f.input :birthday
         = f.action :submit, label: 'search'
 
+.row
+  .columns.small-12
+    ul#selfies
+
 #searching.reveal-modal data-reveal=true
   h2 searching...
   p.lead Your couch.  It is mine.
@@ -16,4 +20,6 @@
 #found.reveal-modal data-reveal=true
   h2 who do you think you were?
   ul#ancestors
-    li= link_to 'Anton', ancestors_search_path(name: 'anton', birthday: '11-11-1100'), remote: true
+
+#done.reveal-modal data-reveal=true
+  h2 done!
