@@ -1,1 +1,1 @@
-li= link_to ancestor['name'], ancestors_search_path(ancestor: { name: ancestor['name'], birthday: ancestor['/people/person/date_of_birth']}), class: 'ancestor_link'
+li= link_to "#{ancestor['name']} (#{ancestor['/people/person/date_of_birth']}, #{ancestor['date_of_death']})", ancestors_search_path(ancestor: { name: ancestor['name'], birthday: ancestor['/people/person/date_of_birth']}), class: 'ancestor_link'
