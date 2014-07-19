@@ -1,10 +1,7 @@
 class AncestorsController < ApplicationController
   def search
-    name = 'Dunya Kirkali'
-    born_on = Date.new(1984, 5, 11)
-    
-    @ancestors = [{ name: name, born_on: born_on.to_s, died_on: nil}]
-    @ancestors = find_ancestor
+    ancestor = { name: params[:ancestor][:name], born_on: params[:ancestor][:birthday], died_on: nil}
+    @ancestors = find_ancestor(ancestor)
     respond_to do |format|
       format.js
     end
@@ -12,10 +9,7 @@ class AncestorsController < ApplicationController
   
   private
   
-    def find_ancestor
-      offspring = @ancestors.last
-      puts "\t#find_ancestor for ".green + offspring.to_s.blue
-  
+    def find_ancestor(offspring)
       query = [{
         :"*" => nil,
         date_of_death: offspring[:born_on].to_s,

@@ -17,10 +17,16 @@
 
 $(function(){
   $(document).foundation();
+
 	
-	$('.ancestor_link').on('click', function(e) {
-		console.log('yug');
-		e.preventDefault();
+	$("#ancestors" ).on( "click", '.ancestor_link', function(e) {
+		$('#searching').foundation('reveal', 'open');
+    $.ajax({
+      url: $(this).attr('href')
+    }).error(function(json) {
+    	alert(json)
+    });
+		return false;
 	});
 
   $('form').submit(function() {
