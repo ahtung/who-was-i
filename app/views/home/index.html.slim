@@ -1,7 +1,15 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+.row
+  .columns.small-12
+    h1 Who was "I"
+    a href="#" data-reveal-id="searching" Click Me For A Modal
 
-= form_tag ancestor_search_path, :method => 'get' do
-  p
-    = text_field_tag :name, params[:name]
-    = submit_tag "Search", :name => nil
+    = form_tag ancestor_search_path, :method => 'get', remote: true do
+      p
+        = text_field_tag :name, params[:name]
+        = text_field_tag :birthday, params[:birthday]
+        = submit_tag "search", :name => nil
+
+#searching.reveal-modal data-reveal=true
+  h2 searching...
+  p.lead Your couch.  It is mine.
+  p Im a cool paragraph that lives inside of an even cooler modal. Wins
