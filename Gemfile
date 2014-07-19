@@ -43,6 +43,7 @@ gem "foreman"
 gem "slim-rails"
 gem "devise"
 gem "foundation-rails"
+gem 'foundation-datetimepicker-rails'
 group :development, :test do
   gem "rspec-rails"
   gem "faker"

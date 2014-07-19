@@ -5,8 +5,10 @@
 
     = form_tag ancestor_search_path, :method => 'get', remote: true do
       p
+        = label_tag :name
         = text_field_tag :name, params[:name]
-        = text_field_tag :birthday, params[:birthday]
+        = label_tag :birthday
+        = text_field_tag :birthday, params[:birthday], class: 'datepicker'
         = submit_tag "search", :name => nil
 
 #searching.reveal-modal data-reveal=true
