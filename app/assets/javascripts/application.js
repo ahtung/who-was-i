@@ -15,14 +15,14 @@
 //= require foundation
 //= require_tree .
 
-$(function(){ 
-	$(document).foundation();
-	
-	$('form').submit(function() {  
-		$('#searching').foundation('reveal', 'open');
+$(function(){
+  $(document).foundation();
+
+  $('form').submit(function() {
+    $('#searching').foundation('reveal', 'open');
     $.ajax({
-        url: $(this).attr('action'),
-        data: $(this).serialize()
+      url: $(this).attr('action'),
+      data: $(this).serialize()
     }).error(function(json) {
     	alert(json)
     });

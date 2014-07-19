@@ -1,0 +1,5 @@
+setTimeout(function() {
+	$('#found').foundation('reveal', 'open')
+	$('#ancestors').empty()
+	$('#ancestors').append("<%= j render :partial => 'ancestor', :collection => @ancestors, :as => :ancestor %>");
+}, 500);

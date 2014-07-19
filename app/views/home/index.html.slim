@@ -2,7 +2,7 @@
   .columns.small-12
     h1 Who was "I"
 
-    = semantic_form_for :ancestor, url: ancestor_search_path, :method => 'get' do |f|
+    = semantic_form_for :ancestor, url: ancestors_search_path, :method => 'get' do |f|
       = f.inputs do
         = f.input :name
         = f.input :birthday
@@ -15,5 +15,5 @@
 
 #found.reveal-modal data-reveal=true
   h2 who do you think you were?
-  ul
-    li Anton
+  ul#ancestors
+    li= link_to 'Anton', ancestors_search_path(name: 'anton', birthday: '11-11-1100'), remote: true
