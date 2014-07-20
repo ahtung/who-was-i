@@ -1,14 +1,13 @@
 .row
   .columns.small-12.medium-4.medium-push-4
-    = image_tag "cycle.png"
     h1#header Who was "I"
 .row#form_row
-  .columns.small-12.medium-4.medium-push-4
+  .columns.small-12.medium-6.medium-push-3
     = semantic_form_for :ancestor, url: ancestors_search_path, :method => 'get' do |f|
       = f.inputs do
         = f.input :name
         = f.input :birthday
-        = f.action :submit, label: 'search'
+        = f.submit 'search', class: 'button' 
 
 .row
   .columns.small-12.medium-6.medium-push-3

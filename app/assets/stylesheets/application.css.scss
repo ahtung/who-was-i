@@ -22,10 +22,11 @@
 
 body
 {
-	background-image:asset-url("dark_geometric.png");
-	background-repeat:repeat;
+//	background-image:asset-url("dark_geometric.png");
+//	background-repeat:repeat;
 }
 
 #ancestors, #selfies {
-	text-align:center;	
+	text-align:center;
+	list-style-type: none;
 }

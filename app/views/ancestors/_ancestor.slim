@@ -1,1 +1,5 @@
-li= link_to "#{ancestor['name']} (#{ancestor['/people/person/date_of_birth']}, #{ancestor['date_of_death']}) - #{ancestor['/people/person/place_of_birth']}", ancestors_search_path(ancestor: { name: ancestor['name'], birthday: ancestor['/people/person/date_of_birth']}), class: 'ancestor_link', :'data-born-on' => ancestor['/people/person/date_of_birth']
+li
+  = link_to ancestors_search_path(ancestor: { name: ancestor['name'], birthday: ancestor['/people/person/date_of_birth']}), class: 'ancestor_link', :'data-born-on' => ancestor['/people/person/date_of_birth'] do
+    h3= "#{ancestor['name']}" 
+    p= "#{ancestor['/people/person/date_of_birth']}, #{ancestor['date_of_death']}"
+    p= "#{ancestor['/people/person/place_of_birth']}"
