@@ -1,26 +1,25 @@
 .row
-  .columns.small-12.medium-4.medium-push-4
+  .columns.small-12.medium-4.medium-push-4.text-center
     h1#header Who was "I"
 .row#form_row
-  .columns.small-12.medium-6.medium-push-3
+  .columns.small-12.medium-6.medium-push-3.text-center
     = semantic_form_for :ancestor, url: ancestors_search_path, :method => 'get' do |f|
-      = f.inputs do
-        = f.input :name
-        = f.input :birthday
-        = f.submit 'search', class: 'button' 
+      = f.text_field :name, label:false
+      = f.text_field :birthday, label:false
+      = f.submit 'search', class: 'button radius center' 
 
 .row
-  .columns.small-12.medium-6.medium-push-3
+  .columns.small-12.medium-6.medium-push-3.text-center
     ul#selfies
 
-#searching.reveal-modal data-reveal=true
+#searching.reveal-modal.text-center data-reveal=true
   h2 searching...
   p.lead Your couch.  It is mine.
   p Im a cool paragraph that lives inside of an even cooler modal. Wins
 
-#found.reveal-modal data-reveal=true
+#found.reveal-modal.text-center data-reveal=true
   h2 who do you think you were?
   ul#ancestors
 
-#done.reveal-modal data-reveal=true
+#done.reveal-modal.text-center data-reveal=true
   h2 done!

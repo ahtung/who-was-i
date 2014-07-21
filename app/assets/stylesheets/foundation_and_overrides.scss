@@ -43,8 +43,8 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-bold: bold !default;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-$body-font-color: #BF6B04;
+$body-bg: #1c1c1c;
+$body-font-color: #A6AB69;
 $body-font-family: "Helvetica";
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
@@ -59,7 +59,7 @@ $body-font-weight: $font-weight-normal;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #594302;
+$primary-color: #AD816B;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -67,7 +67,7 @@ $primary-color: #594302;
 // $info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 20px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -126,7 +126,7 @@ $primary-color: #594302;
 $header-font-family: "Medula One";
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-$header-font-color: #D98E04;
+$header-font-color: #8C5774;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -528,12 +528,12 @@ $header-font-color: #D98E04;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(14);
-// $input-bg-color: #fff;
-// $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
-// $input-border-color: scale-color(#fff, $lightness: -20%);
+$input-bg-color: #4C5974;
+$input-focus-bg-color: scale-color($input-bg-color, $lightness: -2%);
+$input-border-color: scale-color($input-bg-color, $lightness: -20%);
 // $input-focus-border-color: scale-color(#fff, $lightness: -40%);
 // $input-border-style: solid;
-// $input-border-width: 1px;
+$input-border-width: 0px;
 // $input-border-radius: $global-radius;
 // $input-disabled-bg: #ddd;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
