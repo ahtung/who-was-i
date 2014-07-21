@@ -60,7 +60,7 @@ $body-font-weight: $font-weight-normal;
 
 // We use these as default colors throughout
 $primary-color: #AD816B;
-// $secondary-color: #e7e7e7;
+$secondary-color: #A6AB69;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -526,7 +526,7 @@ $header-font-color: #8C5774;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
+$input-font-color: $secondary-color;
 // $input-font-size: rem-calc(14);
 $input-bg-color: #4C5974;
 $input-focus-bg-color: scale-color($input-bg-color, $lightness: -2%);

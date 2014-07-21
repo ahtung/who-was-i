@@ -1,7 +1,7 @@
 .row
   .columns.small-12.medium-4.medium-push-4.text-center
     h1#header Who was "I"
-.row#form_row
+.row
   .columns.small-12.medium-6.medium-push-3.text-center
     = semantic_form_for :ancestor, url: ancestors_search_path, :method => 'get' do |f|
       = f.text_field :name, label:false
