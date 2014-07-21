@@ -6,5 +6,6 @@ FactoryGirl.define do
     password 'dE3kI812'
     password_confirmation 'dE3kI812'
     name 'Dunya Kirkali'
+    born_on { Time.new(1984, 5, 11) }
   end
 end
