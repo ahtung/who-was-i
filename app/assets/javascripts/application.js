@@ -41,7 +41,7 @@ $(function(){
     $.ajax({
       url: $(this).attr('href')
     }).error(function(json) {
-    	alert(json)
+    	// alert(json)
     });
 		return false;
 	});
@@ -56,7 +56,7 @@ $(function(){
       url: $(this).attr('action'),
       data: $(this).serialize()
     }).error(function(json) {
-    	alert(json)
+    	// alert(json)
     });
     return false;
 	});

@@ -16,7 +16,8 @@ describe 'User', js: true do
   end
   it 'should be able to pick the first branch from the options' do
     expect(page).to have_content "who do you think you were?"
-    click_on 'Anton'
+    save_and_open_page
+    click_on 'George'
     
     expect(page).to have_content "searching..."
   end
