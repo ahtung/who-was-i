@@ -1,0 +1,6 @@
+#!/bin/bash
+set -x
+set -e
+
+git push git@heroku.com:who-was-i.git master
+heroku run rake db:migrate --app who-was-i
