@@ -1,0 +1,7 @@
+#!/bin/bash
+set -x
+set -e
+
+git push git@heroku.com:who-was-i-staging.git develop:master
+heroku run rake db:migrate --app who-was-i-staging
+heroku run rake db:seed --app who-was-i-staging
